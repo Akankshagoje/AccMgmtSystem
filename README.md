@@ -17,6 +17,7 @@ Players: Represents the players who create accounts to play games.
     account_status: Indicates whether the account is active or closed.
 
 Games: Represents the games published by RocketGames.
+
     gid (Primary Key): Unique identifier for each game.
     game_title: Title of the game.
     cost: Price of the game fixed by the studio.
@@ -24,15 +25,18 @@ Games: Represents the games published by RocketGames.
     Studio: Represents the studios that develop the games.
 
 studio_id (Primary Key): Unique identifier for each studio.
+
     studio_name: Name of the studio.
     studio_location: Location of the studio.
 
 GamePlay: Represents the relationship between players and the games they play.
+
     pid (Foreign Key): Foreign key referring to the Players table.
     gid (Foreign Key): Foreign key referring to the Games table.
 
 API Endpoints
 The API provides the following endpoints for interacting with the account management system:
+
     # Player routes
     POST /players: Creates a new player account.
     DELETE /players/{pid}: Closes the account of a specific player.
@@ -50,7 +54,7 @@ The API provides the following endpoints for interacting with the account manage
 Running the API
 To run the API, follow these steps:
 
-Install the required dependencies mentioned in the requirements.txt file.
-Set up a database connection and configure the connection details in the Flask app.
-Run the Flask application using the command python app.py.
-The API will be accessible at http://localhost:5000/
+    Install the required dependencies mentioned in the requirements.txt file.
+    Set up a database connection and configure the connection details in the Flask app.
+    Run the Flask application using the command python app.py.
+    The API will be accessible at http://localhost:5000/
